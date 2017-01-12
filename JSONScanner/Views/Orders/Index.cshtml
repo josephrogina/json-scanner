@@ -1,0 +1,15 @@
+﻿@model IEnumerable<JSONScanner.Models.OrdersViewModels>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Pizza Topping Report</h2>
+<div class="">
+    @foreach (var record in Model)
+    {
+        <div class="form-group">
+            <p><b>Toppings: </b> @record.toppings - <b>Times ordered: </b> @record.OrderCount</p>
+        </div>
+    }
+</div>
